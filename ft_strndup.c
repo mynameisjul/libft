@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 15:09:19 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/12 15:10:00 by jblaye           ###   ########.fr       */
+/*   Created: 2024/02/12 15:25:07 by jblaye            #+#    #+#             */
+/*   Updated: 2024/02/12 15:29:39 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strndup(const char *s, int size)
 {
 	char	*r;
-	size_t	lens;
+	int		lens;
+	int		i;
 
+	i = 0;
 	lens = 0;
 	if(s)
 		lens = ft_strlen(s);
+	if (size < lens)
+		lens = size;
 	r = (char *) malloc (sizeof(char) * (lens + 1));
 	if (!r || !s)
 		return (0);
-	while (*s != 0)
+	while (i < lens)
 	{
-		*r = *s;
-		r++;
-		s++;
+		r[i] = s[i];
+		i++;
 	}
-	*r = 0;
-	return (r - lens);
+	r[i] = 0;
+	return (r);
 }
