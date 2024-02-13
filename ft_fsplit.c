@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:17:47 by jblaye            #+#    #+#             */
-/*   Updated: 2024/01/19 15:21:58 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/13 12:59:56 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	ft_fsplit(char **tab)
 	int	i;
 
 	i = 0;
-	while (tab[i] != 0)
+	if (tab)
 	{
-		free(tab[i]);
-		i++;
+		while (tab[i] != 0)
+		{
+			free(tab[i]);
+			i++;
+		}
+		free(tab);
 	}
-	free(tab);
 }
