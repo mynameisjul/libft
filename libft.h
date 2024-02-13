@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:48:49 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/12 15:28:52 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/13 11:45:50 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ typedef struct s_line
 	char	*result;
 	char	*rest;
 }					t_line;
+
+typedef struct s_read
+{
+	char	*line;
+	int		count;
+}				t_read;
 
 //MALLOC FUNCTIONS
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -107,6 +113,7 @@ t_line	ft_read(int fd, t_line line);
 t_line	get_end_of_line(int fd, char *tmp);
 char	*get_next_line(int fd);
 char	*oget_next_line(int fd, char **line);
+char	*ognl_nb(int fd, t_read *read);
 
 //CHAINED LISTS FUCTIONS
 t_list	*ft_lstnew(void *content);
