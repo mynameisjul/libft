@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:00:36 by jblaye            #+#    #+#             */
-/*   Updated: 2024/01/10 19:07:38 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/14 10:37:49 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_dprintf(int fd, const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			nbc = nbc + print_type(str[i + 1], ap);
+			nbc = nbc + print_type(str[i + 1], ap, fd);
 			i++;
 		}
 		else
