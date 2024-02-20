@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:48:49 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/20 11:56:10 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/20 12:14:02 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,5 +130,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //OTHER
 int		ft_rand(void);
+int		ft_rand_range(int range);
 
 #endif

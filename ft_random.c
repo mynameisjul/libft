@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 11:52:41 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/20 11:53:16 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/20 12:16:10 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,16 @@ int	ft_rand(void)
 		return ((void)close(fd), -1);
 	close(fd);
 	return (buf[0]);
+}
+
+int	ft_rand_range(int range)
+{
+	int	nb;
+
+	nb = ft_rand();
+	if (nb < 0)
+		nb = -nb;
+	while (nb > range)
+		nb = nb / range;
+	return (nb);
 }
