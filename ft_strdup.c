@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:09:19 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/12 15:10:00 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/21 17:23:20 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	lens;
 
 	lens = 0;
-	if(s)
+	if (s)
 		lens = ft_strlen(s);
 	r = (char *) malloc (sizeof(char) * (lens + 1));
 	if (!r || !s)

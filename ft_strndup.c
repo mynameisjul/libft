@@ -6,7 +6,7 @@
 /*   By: jblaye <jblaye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:25:07 by jblaye            #+#    #+#             */
-/*   Updated: 2024/02/12 15:29:39 by jblaye           ###   ########.fr       */
+/*   Updated: 2024/02/21 17:23:47 by jblaye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strndup(const char *s, int size)
 
 	i = 0;
 	lens = 0;
-	if(s)
+	if (s)
 		lens = ft_strlen(s);
 	if (size < lens)
 		lens = size;
